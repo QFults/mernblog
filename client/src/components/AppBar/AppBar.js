@@ -68,7 +68,6 @@ const AppBar = () => {
             </>
           }
         </Nav>
-        <NavbarText>Simple Text</NavbarText>
       </Collapse>
     </Navbar>
   )
