@@ -21,6 +21,11 @@ const AppBar = () => {
 
   const toggle = () => setIsOpen(!isOpen)
 
+  const handleLogOut = () => {
+    localStorage.removeItem('user')
+    window.location = '/login'
+  }
+
   return (
     <Navbar color='light' light expand='md'>
       <Link to='/' className='link'>
@@ -43,6 +48,9 @@ const AppBar = () => {
             <Link to='/' className='link'>
               <NavLink>Home</NavLink>
             </Link>
+          </NavItem>
+          <NavItem>
+            <NavLink onClick={handleLogOut}>Log Out</NavLink>
           </NavItem>
         </Nav>
         <NavbarText>Simple Text</NavbarText>

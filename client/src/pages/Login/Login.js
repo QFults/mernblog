@@ -17,6 +17,7 @@ const Login = () => {
   }
 
   const handleRegister = event => {
+    event.preventDefault()
     User.register({
       name: loginState.name,
       email: loginState.email,
@@ -31,6 +32,7 @@ const Login = () => {
   }
 
   const handleLogin = event => {
+    event.preventDefault()
     User.login({
       username: loginState.un,
       password: loginState.pw
